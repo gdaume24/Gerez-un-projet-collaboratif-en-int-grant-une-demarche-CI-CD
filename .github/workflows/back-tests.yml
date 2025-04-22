@@ -20,6 +20,8 @@ jobs:
         with:
           java-version: 1.11
       - name: Build with Maven
+        working-directory: ./back
         run: mvn -B package --file pom.xml
       - name: Test with Maven
+        working-directory: ./back
         run: mvn -B test --file pom.xml
