@@ -1,5 +1,7 @@
 # Étape de build
-FROM node:18.18.0 AS build  # Node LTS compatible avec Angular 15/16
+# Node LTS compatible avec Angular 15/16
+FROM node:18.18.0 AS build
+
 
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
