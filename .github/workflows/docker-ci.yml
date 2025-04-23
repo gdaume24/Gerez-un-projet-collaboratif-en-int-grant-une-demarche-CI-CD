@@ -1,22 +1,32 @@
-name: Build and Push Docker Image
+name: Build and Push Docker Images
 
 on:
   push:
     branches:
       - main
   pull_request:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: docker_env
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Extract Docker image metadata
-        id: meta
+
+      ### FRONT metadata ###
+      - name: Extract Docker metadata (front)
+        id: meta_front
         uses: docker/metadata-action@v5
         with:
-          images: ${{ vars.DOCKER_USERNAME }}/my-image
+          images: ${{ vars.DOCKER_USERNAME }}/my-frontend
+
+      ### BACK metadata ###
+      - name: Extract Docker metadata (back)
+        id: meta_back
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ vars.DOCKER_USERNAME }}/my-backend
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -24,9 +34,24 @@ jobs:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker image
+      ### BUILD & PUSH FRONT ###
+      - name: Build and push frontend image
         uses: docker/build-push-action@v6
         with:
+          context: ./front
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
+          tags: ${{ steps.meta_front.outputs.tags }}
+          annotations: ${{ steps.meta_front.outputs.annotations }}
+          provenance: false
+          sbom: false
+
+      ### BUILD & PUSH BACK ###
+      - name: Build and push backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./back
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta_back.outputs.tags }}
+          annotations: ${{ steps.meta_back.outputs.annotations }}
+          provenance: false
+          sbom: false
