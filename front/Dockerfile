@@ -1,18 +1,17 @@
-# Étape de build
-# Node LTS compatible avec Angular 15/16
-FROM node:18.18.0 AS build
-
+# Node compatible avec Angular 17
+FROM node:18.19.1 AS build
 
 WORKDIR /usr/local/app
-COPY ./ /usr/local/app/
+COPY . .
 
-# Forcer une version compatible de TypeScript
-RUN yarn install
-RUN yarn add typescript@4.8.4 -D  # Compatible avec Angular CLI
-RUN npm run build
+# Installer les dépendances et une version compatible de TypeScript
+RUN yarn install && \
+    yarn add typescript@4.8.4 -D && \
+    npm run build
 
-# Étape de prod
-FROM nginx:latest as production
+FROM nginx:latest AS production
+
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /usr/local/app/dist/bobapp /usr/share/nginx/html
+
 EXPOSE 80
