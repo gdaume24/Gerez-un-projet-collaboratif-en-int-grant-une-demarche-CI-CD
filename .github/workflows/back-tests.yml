@@ -12,7 +12,7 @@ on:
         - "card-/**" # Push events to branches matching refs/heads/card-*
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -44,6 +44,7 @@ jobs:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
+
       - name: Cache Maven packages
         working-directory: ./back
         uses: actions/cache@v4
