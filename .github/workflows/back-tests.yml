@@ -53,8 +53,8 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      # - name: Build and analyze
-      #   working-directory: ./back
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      #   run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=gdaume24_Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD
+      - name: Build and analyze
+        working-directory: ./back
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=gdaume24_Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD
