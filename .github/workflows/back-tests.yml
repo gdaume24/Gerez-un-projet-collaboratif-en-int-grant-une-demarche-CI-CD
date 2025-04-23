@@ -46,9 +46,9 @@ jobs:
           restore-keys: ${{ runner.os }}-sonar
 
       - name: Cache Maven packages
-        working-directory: ./back
         uses: actions/cache@v4
         with:
+          projectBaseDir: back
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
