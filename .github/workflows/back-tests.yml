@@ -1,6 +1,7 @@
-name: Maven Run Tests when push to Main branch and newly created PRs.
+name: tests-backend
 
 on:
+  # Maven Run Tests when push to Main branch and newly created PRs.
   # Trigger the workflow on push for the main branch
   # and pull request for main and card-* prefix branches
   push:
