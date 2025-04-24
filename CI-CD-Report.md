@@ -49,10 +49,11 @@
 
 ## 💬 Retours utilisateurs (Notes & Avis)
 
-| Utilisateur   | Feedback                                                  |
-| ------------- | --------------------------------------------------------- |
-| Utilisateur A | "Le front met trop de temps à charger après build Docker" |
-| Utilisateur B | "Il manque des tests sur les contrôleurs REST du backend" |
+| Retours utilisateurs                                                      |
+| ---------------------------------------------------------------------- |
+| "Impossible de poster une suggestion de blague ! Le bouton tourne et fait planter mon navigateur" |
+| "Un bug a été remonté sur le post de la vidéo" |
+| "Un utilisateur ne reçoit plus rien, il a envoyé un mail il y a 5 jours qui est resté sans nouvelles" |
 
 ---
 
