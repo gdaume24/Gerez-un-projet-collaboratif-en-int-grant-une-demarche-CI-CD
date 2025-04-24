@@ -57,23 +57,8 @@
 
 ---
 
-## ✅ Recommandations
-
-- ✅ **Augmenter la couverture frontend** :
-  - Ajouter des tests ciblés sur les composants critiques (paiement, login)
-- ✅ **Améliorer la qualité SonarQube backend** :
-  - Supprimer les duplications et simplifier les méthodes longues
-- 🔄 **Automatiser les tests E2E** (Cypress ou Playwright)
-- 🕵️‍♂️ **Vérification post-déploiement automatique** à intégrer (ping service, test d’API)
-
----
-
 ## 📦 Artifacts et Rapports disponibles
 
 - `frontend-coverage` : rapport Jest généré dans `front/coverage/bobapp`
 - `jacoco-report` : rapport JaCoCo dans `back/target/site/jacoco/`
 - SonarQube : intégration active pour le backend (`sonar-maven-plugin`) et le frontend (`sonarqube-scan-action`)
-
----
-
-> 🎯 **Objectif final** : Obtenir une pipeline CI/CD automatisée, rapide, fiable et accompagnée d’analyses qualité avec couverture test ≥ 80%
