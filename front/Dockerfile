@@ -2,7 +2,7 @@
 FROM node:18.19.1 AS build
 
 WORKDIR /usr/local/app
-COPY ./ /usr/local/app/
+COPY . .
 
 # Installer les dépendances et une version compatible de TypeScript
 RUN yarn install && \
