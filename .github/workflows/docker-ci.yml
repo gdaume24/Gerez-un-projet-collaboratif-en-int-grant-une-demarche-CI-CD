@@ -19,14 +19,14 @@ jobs:
         id: meta_front
         uses: docker/metadata-action@v5
         with:
-          images: ${{ vars.DOCKER_USERNAME }}/my-frontend
+          images: ${{ vars.DOCKER_USERNAME }}/projet_10_frontend
 
       ### BACK metadata ###
       - name: Extract Docker metadata (back)
         id: meta_back
         uses: docker/metadata-action@v5
         with:
-          images: ${{ vars.DOCKER_USERNAME }}/my-backend
+          images: ${{ vars.DOCKER_USERNAME }}/projet_10_backend
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
