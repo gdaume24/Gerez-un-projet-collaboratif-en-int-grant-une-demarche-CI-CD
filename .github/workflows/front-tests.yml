@@ -17,7 +17,7 @@ jobs:
         working-directory: front
     strategy:
       matrix:
-        node-version: [16.x] # Essaye les deux versions pour tester
+        node-version: [18.19] # Essaye les deux versions pour tester
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
