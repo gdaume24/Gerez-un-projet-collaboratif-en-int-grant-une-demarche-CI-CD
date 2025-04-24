@@ -4,7 +4,7 @@
 
 ### 🧪 Frontend - Tests (`.github/workflows/front-tests.yml`)
 
-- **Installation** des dépendances Node.js (v20)
+- **Installation** des dépendances Node.js (v18)
 - **Exécution des tests** via `npm run test:prod`
 - **Linting** du code avec `npm run lint`
 - **Génération du coverage** et upload via GitHub Actions Artifacts
