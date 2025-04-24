@@ -43,7 +43,7 @@
 - **Backend** :
   - Couverture JaCoCo : `32%`
   - SonarQube quality gate : ✅ Passed
-- **Temps total d'exécution** : `ex: 4 min 35 s`
+- **Temps total d'exécution** : `2 min 40 s`
 
 ---
 
