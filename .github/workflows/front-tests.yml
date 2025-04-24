@@ -17,7 +17,7 @@ jobs:
         working-directory: front
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [20.x, 22.x] # Essaye les deux versions pour tester
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -37,9 +37,11 @@ jobs:
         with:
           name: frontend-coverage
           path: front/coverage/bobapp
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         with:
