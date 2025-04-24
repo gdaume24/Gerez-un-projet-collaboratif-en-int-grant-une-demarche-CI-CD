@@ -22,7 +22,7 @@
 
 - **Extraction des métadonnées** Docker pour le frontend et backend
 - **Login DockerHub** sécurisé avec token
-- **Build & Push** des images Docker `frontend` et `backend` sur DockerHub (hors PR)
+- **Build & Push** des images Docker `geoffroydaumer/projet_10_frontend` et `geoffroydaumer/projet_10_backend` sur DockerHub (hors PR)
 
 ---
 
