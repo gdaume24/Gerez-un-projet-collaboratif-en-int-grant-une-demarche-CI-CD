@@ -2,7 +2,7 @@
 
 ## 🔧 Étapes du Workflow CI/CD
 
-### 🧪 Frontend - Tests (`.github/workflows/front-end-tests.yml`)
+### 🧪 Frontend - Tests (`.github/workflows/front-tests.yml`)
 
 - **Installation** des dépendances Node.js (v20)
 - **Exécution des tests** via `npm run test:prod`
@@ -10,7 +10,7 @@
 - **Génération du coverage** et upload via GitHub Actions Artifacts
 - **Scan SonarQube** pour analyse qualité et couverture
 
-### 🧪 Backend - Tests (`.github/workflows/back-end-tests.yml`)
+### 🧪 Backend - Tests (`.github/workflows/back-tests.yml`)
 
 - **Installation JDK 11**
 - **Build Maven** (`mvn package`)
