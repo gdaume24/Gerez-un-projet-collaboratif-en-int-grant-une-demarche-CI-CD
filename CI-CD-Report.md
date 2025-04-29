@@ -28,10 +28,11 @@
 
 ## 📊 KPIs proposés
 
-| KPI                               | Description                                                              | Objectif        |
-| --------------------------------- | ------------------------------------------------------------------------ | --------------- |
-| ✅ **Code coverage (tests)**      | Pourcentage du code couvert par les tests unitaires (via JaCoCo ou Jest) | **≥ 80%**       |
-| ⏱️ **Durée de la pipeline CI/CD** | Temps moyen d'exécution des tests & builds Docker                        | **≤ 5 minutes** |
+| KPI                                                   | Description                                                    | Objectif            |
+| ----------------------------------------------------- | -------------------------------------------------------------- | ------------------- |
+| ✅ **Couverture du code via les tests pour le back**  | Pourcentage du code couvert par les tests unitaires via JaCoCo | **≥ 80%**           |
+| ✅ **Couverture du code via les tests pour le front** | Pourcentage du code couvert par les tests unitaires via Jest   | **Aucune exigence** |
+| ⏱️ **Durée de la pipeline CI/CD**                     | Temps moyen d'exécution des tests & builds Docker              | **≤ 5 minutes**     |
 
 ---
 
@@ -49,10 +50,10 @@
 
 ## 💬 Retours utilisateurs (Notes & Avis)
 
-| Retours utilisateurs                                                      |
-| ---------------------------------------------------------------------- |
-| Impossible de poster une suggestion de blague ! Le bouton tourne et fait planter mon navigateur |
-| Un bug a été remonté sur le post de la vidéo |
+| Retours utilisateurs                                                                                |
+| --------------------------------------------------------------------------------------------------- |
+| Impossible de poster une suggestion de blague ! Le bouton tourne et fait planter mon navigateur     |
+| Un bug a été remonté sur le post de la vidéo                                                        |
 | Un utilisateur ne reçoit plus rien, il a envoyé un mail il y a 5 jours qui est resté sans nouvelles |
 
 ---
