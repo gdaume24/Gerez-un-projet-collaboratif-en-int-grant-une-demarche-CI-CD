@@ -1,6 +1,7 @@
 # Node compatible avec Angular 17
 FROM node:18.19.1 AS build
 
+# Les fichiers sensibles et inutiles sont ignorés via .dockerignore
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
 
