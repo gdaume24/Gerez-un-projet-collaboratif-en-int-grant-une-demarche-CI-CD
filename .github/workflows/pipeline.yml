@@ -59,8 +59,8 @@ jobs:
 
   docker:
     runs-on: ubuntu-latest
+    environment: docker_env
     needs: [frontend-tests, backend-tests]
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@v4
 
